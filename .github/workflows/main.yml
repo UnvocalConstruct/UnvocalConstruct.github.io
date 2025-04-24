@@ -1,7 +1,10 @@
-name: publish-action
+name: Bun
+
 on:
-  release:
-    types: released
+  push:
+    branches:
+      - main # Execute on every push
+  workflow_dispatch: # Execute on manual trigger
 jobs:
   publish-action:
     runs-on: ubuntu-latest
